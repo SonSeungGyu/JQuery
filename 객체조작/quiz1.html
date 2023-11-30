@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script>
+        function addMember() {
+            const name = $("#name").val(); // 입력필드에 담긴 값을 val()로 가져와 변수에 넣어주기
+            const age = $("#age").val();
+            const gen = $("#gender").val();
+
+            const tr = `<tr>
+                        <td>${name}</td><td>${age}</td><td>${gen}</td>
+                        </tr>`; //위의 변수들을 이용해 테이블의 행값에 추가해주기
+            $("table").append(tr);
+        }
+    </script>
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: solid 1px;
+            padding: 10px 20px;
+
+        }
+
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>회원 등록하기</h1>
+    <input type="text" name="name" id="name" placeholder="이름 입력">
+    <input type="text" name="age" id="age" placeholder="나이 입력">
+    <input type="text" name="gender" id="gender" placeholder="성별을 입력">
+
+    <button onclick="addMember()">새로운 회원 등록</button>
+    <!-- <button onclick="reset">초기화</button> -->
+    
+
+
+
+
+
+    <table>
+        <caption>회원 목록</caption>
+
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+        </tr>
+        <tr>
+            <td>둘리</td>
+            <td>10</td>
+            <td>여</td>
+        </tr>
+        <tr>
+            <td>또치</td>
+            <td>20</td>
+            <td>남</td>
+        </tr>
+    </table>
+
+
+
+
+</body>
+
+</html>
