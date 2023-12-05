@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script>
+        // $("#data").text(); => data 안의 content 가져오기
+        // function answer() {
+        //     const num1 = $("#num1").val();
+        //     const num2 = $("#num2").val();
+        //     const answer = $(".answer");
+
+        //     if ($("button").text() == '+') {
+        //         answer.text(num1 + num2);
+        //     } else if ($("button").text() == '-') {
+        //         answer.text(num1 + num2);
+        //     } else if ($("button").text() == '*') {
+        //         answer.text(num1 + num2);
+        //     } else($("button").text() == '/') {
+        //         answer.text(num1 + num2);
+        //     }
+        // }
+
+
+
+        $(function () {
+            const num1 = $("#num1");
+            const num2 = $("#num2");
+            $("#plus").click(function () {
+
+                $(".answer").text(Number( num1.val()) + Number( num2.val()));
+
+            });
+
+            $("#mi").click(function () {
+                $(".answer").text(Number( num1.val()) - Number( num2.val()));
+
+            });
+
+            $("#car").click(function () {
+                $(".answer").text(Number( num1.val()) * Number( num2.val()));
+
+            });
+
+            $("#div").click(function () {
+                $(".answer").text(Number( num1.val()) / Number( num2.val()));
+
+            });
+        });
+    </script>
+
+
+    <style>
+        button {
+            width: 40px;
+            height: 35px;
+        }
+
+        button:hover {
+            background-color: bisque;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>두수를 입력하고, 계산기능을 선택학세요!</h2>
+    <p>
+        <label for="num1">숫자1</label>
+        <input type="text" name="num1" id="num1">
+    </p>
+
+    <p>
+        <label for="num2">숫자2</label>
+        <input type="text" name="num2" id="num2">
+    </p>
+
+    <button id="plus">+</button>
+    <button id="mi">-</button>
+    <button id="car">*</button>
+    <button id="div">/</button>
+    <p>
+
+        <span>결과 </span>
+        <!-- <input type="text" class="answer"> -->
+        <span class="answer"> </span>
+
+    </p>
+</body>
+
+</html>
